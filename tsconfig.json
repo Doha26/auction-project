@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES2019",                   // Version ECMAScript cible
+      "module": "commonjs",                 // Module à utiliser dans les fichiers de sortie
+      "strict": true,                       // Active le mode strict pour de meilleures vérifications de type
+      "esModuleInterop": true,              // Permet une meilleure compatibilité avec les modules CommonJS et ES
+      "skipLibCheck": true,                 // Ignore la vérification des fichiers de définition de bibliothèque
+      "forceConsistentCasingInFileNames": true, // Force une casse cohérente dans les noms de fichiers
+      "outDir": "./dist",                   // Dossier de sortie pour les fichiers compilés
+      "rootDir": "./src"                    // Répertoire racine pour les fichiers sources
+    },
+    "include": ["src/**/*"],                // Inclut tous les fichiers dans le répertoire source
+    "exclude": ["node_modules", "dist", "tests"] // Exclut ces répertoires de la compilation
+  }
