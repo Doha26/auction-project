@@ -27,7 +27,17 @@ To set up the project locally, follow these steps:
 
    ```bash
    git clone https://github.com/Doha26/auction-project.git
-
 1. **Navigate to the project**
    ```bash
    npm install
+
+1. **Usage**
+To run the application or execute tests, use the following commands:
+
+Run the Application
+
+This project does not have a direct entry point for running an application but contains business logic and a presenter for auction results.
+
+Run Tests
+
+To execute the tests and ensure everything works as expected, run:

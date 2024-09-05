@@ -1,5 +1,5 @@
+import { AuctionService } from './application';
 import { Auction } from './domain/Auction';
-import { AuctionService } from './application/auction.service';
 import { DisplayAuctionPresenter } from './presenter';
 
 // Sample Bidders (2 entry inputs : Bidder name, and his  different bids)
