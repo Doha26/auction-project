@@ -1,2 +1,2 @@
-export { IAuctionPresenter } from './IAuctionPresenter';
-export { IWinnerBid } from './IWinnerBid';
+export { IAuctionPresenter } from "./IAuctionPresenter";
+export { IBidder, IWinnerBid} from "./IShared";

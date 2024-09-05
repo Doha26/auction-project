@@ -1,12 +1,13 @@
-import { Auction } from "../domain/Auction";
-import { Bid } from "../domain/Bid";
+
+import { Auction, Bid } from "../domain";
+import { IBidder } from "../interface";
 import { IAuctionPresenter } from "../interface/IAuctionPresenter";
 
 export class AuctionService {
   constructor(private auction: Auction, private presenter: IAuctionPresenter) {}
 
   // Process the bids and return the auction result
-  runAuction(bidders: { name: string; bids: number[] }[]): void {
+  runAuction(bidders: IBidder[]): void {
     bidders.forEach((bidder) => {
       bidder.bids.forEach((amount) => {
         const bid = new Bid(bidder.name, amount);
