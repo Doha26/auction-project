@@ -72,50 +72,7 @@ npm run start // to run in prod mode
 
 
 ## Project structure
-
-/auction-system
-│
-├── /src
-│   ├── /application
-│   │   ├── AuctionService.ts
-│   │   ├── index.ts
-│   │
-│   ├── /domain
-│   │   ├── Auction.ts
-│   │   ├── Bid.ts
-│   │   ├── index.ts
-│   │
-│   ├── /presenters
-│   │   ├── DisplayAuctionPresenter.ts
-│   │   ├── index.ts
-│   │
-│   ├── /interfaces
-│   │    ├── IAuctionPresenter.ts
-│   │    └── IShared.ts
-│   │    └── index.ts
-│   │
-│   ├── /utils
-│   │   ├── index.ts
-│   │
-│   ├── /screenshots
-│   │   ├── app.png
-│   │   ├── tests.png
-│   │
-│   ├── index.ts
-│
-├── /tests
-│   ├── Auction.test.ts
-│
-├── .eslintrc.json
-├── .gitignore
-├── .prettierignore
-├── .prettierrc
-├── package.json
-├── tsconfig.json
-├── README.md
-└── jest.config.js
-
-
+![Code structure](screenshots/structure.png)
 
 ## Documentation
 
