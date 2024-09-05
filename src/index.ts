@@ -1,8 +1,8 @@
 import { Auction } from './domain/Auction';
 import { AuctionService } from './application/auction.service';
-import { DisplayAuctionPresenter } from './interface/DisplayAuctionPresenter';
+import { DisplayAuctionPresenter } from './presenter/DisplayAuctionPresenter';
 
-// Exemple d'enchérisseurs. (2 inputs en entrée : Le nom de l'enchérisseur et ses différentes enchères)
+// Sample Bidders (2 entry inputs : Bidder name, and his  different bids)
 const bidders = [
   { name: 'A', bids: [110, 130] },
   { name: 'B', bids: [] },
@@ -11,14 +11,14 @@ const bidders = [
   { name: 'E', bids: [132, 135, 140] }
 ];
 
-// Intitialisation de l'enchère avec le prix de réserve
+// Initialize the auction with a reserve price
 const auction = new Auction(100);
 
-// Petite couche pour l'affiche du résultat
+// Small layer to display the result 
 const presenter = new DisplayAuctionPresenter();
 
-
+// Initialize the auction service
 const auctionService = new AuctionService(auction, presenter);
 
-// On exécute l'encheère et on affiche le Gagnant
+// Run the auction and display the results
 const result = auctionService.runAuction(bidders);

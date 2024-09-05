@@ -1,4 +1,5 @@
-import { Bid } from './Bid';
+import { IWinnerBid } from "../interface";
+import { Bid } from "./Bid";
 
 export class Auction {
   private bids: Bid[] = [];
@@ -13,9 +14,9 @@ export class Auction {
   }
 
   // Determine the auction winner and the price they pay
-  determineWinner(): { winner: string; winningPrice: number } {
+  determineWinner(): IWinnerBid {
     if (this.bids.length === 0) {
-      throw new Error('No valid bids were placed.');
+      return { winner: null, winningPrice: this.reservePrice }; // Reserverd price win if no winner
     }
 
     // Sort bids from highest to lowest
@@ -25,12 +26,15 @@ export class Auction {
     const winningBid = sortedBids[0];
 
     // Filter out bids made by the winning bidder to find the second-highest bid
-    const nonWinningBids = sortedBids.filter(bid => bid.bidder !== winningBid.bidder);
-    const secondHighestBid = nonWinningBids.length > 0 ? nonWinningBids[0].amount : this.reservePrice;
+    const nonWinningBids = sortedBids.filter(
+      (bid) => bid.bidder !== winningBid.bidder
+    );
+    const secondHighestBid =
+      nonWinningBids.length > 0 ? nonWinningBids[0].amount : this.reservePrice;
 
     return {
       winner: winningBid.bidder,
-      winningPrice: secondHighestBid
+      winningPrice: secondHighestBid,
     };
   }
 }

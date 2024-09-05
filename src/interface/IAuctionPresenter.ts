@@ -1,5 +1,5 @@
-// src/interface/IAuctionPresenter.ts
+import { IWinnerBid } from ".";
 export interface IAuctionPresenter {
-    present(winner: string, winningPrice: number): void;
+    present(winnerBid: IWinnerBid): void;
   }
   
