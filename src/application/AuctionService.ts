@@ -1,10 +1,12 @@
-
-import { Auction, Bid } from "../domain";
-import { IBidder } from "../interface";
-import { IAuctionPresenter } from "../interface/IAuctionPresenter";
+import { Auction, Bid } from '../domain';
+import { IBidder } from '../interface';
+import { IAuctionPresenter } from '../interface/IAuctionPresenter';
 
 export class AuctionService {
-  constructor(private auction: Auction, private presenter: IAuctionPresenter) {}
+  constructor(
+    private auction: Auction,
+    private presenter: IAuctionPresenter
+  ) {}
 
   // Process the bids and return the auction result
   runAuction(bidders: IBidder[]): void {

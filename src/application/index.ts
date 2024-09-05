@@ -1,1 +1,2 @@
-export { AuctionService } from "./AuctionService";
+export { AuctionService } from './AuctionService';
+PageTransitionEvent;

@@ -8,13 +8,13 @@ const bidders = [
   { name: 'B', bids: [] },
   { name: 'C', bids: [125] },
   { name: 'D', bids: [105, 115, 90, 133] },
-  { name: 'E', bids: [132, 135, 140] }
+  { name: 'E', bids: [132, 135, 140] },
 ];
 
 // Initialize the auction with a reserve price
 const auction = new Auction(100);
 
-// Small layer to display the result 
+// Small layer to display the result
 const presenter = new DisplayAuctionPresenter();
 
 // Initialize the auction service

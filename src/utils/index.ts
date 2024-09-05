@@ -1,6 +1,6 @@
 export const EMOJIS = {
-    trophyEmoji: '🏆',
-    moneyBagEmoji: '💰',
-    auctionHammerEmoji: '🔨',
-    partyPopperEmoji: '🎉'
-  }
+  trophyEmoji: '🏆',
+  moneyBagEmoji: '💰',
+  auctionHammerEmoji: '🔨',
+  partyPopperEmoji: '🎉',
+};

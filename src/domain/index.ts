@@ -1,2 +1,2 @@
-export { Bid } from "./Bid";
-export { Auction } from "./Auction";
+export { Bid } from './Bid';
+export { Auction } from './Auction';

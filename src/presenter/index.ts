@@ -1,1 +1,1 @@
-export {DisplayAuctionPresenter} from './DisplayAuctionPresenter'
+export { DisplayAuctionPresenter } from './DisplayAuctionPresenter';

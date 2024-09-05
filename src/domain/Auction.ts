@@ -1,5 +1,5 @@
-import { Bid } from ".";
-import { IWinnerBid } from "../interface";
+import { Bid } from '.';
+import { IWinnerBid } from '../interface';
 
 export class Auction {
   private bids: Bid[] = [];

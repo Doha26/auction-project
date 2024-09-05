@@ -1,7 +1,7 @@
 // src/interface/ConsoleAuctionPresenter.ts
-import chalk from "chalk";
-import { IAuctionPresenter, IWinnerBid } from "../interface";
-import { EMOJIS } from "../utils";
+import chalk from 'chalk';
+import { IAuctionPresenter, IWinnerBid } from '../interface';
+import { EMOJIS } from '../utils';
 
 export class DisplayAuctionPresenter implements IAuctionPresenter {
   present(winnerBid: IWinnerBid): void {
@@ -15,18 +15,18 @@ export class DisplayAuctionPresenter implements IAuctionPresenter {
 
     console.log(
       chalk.green(
-        "===================================================================="
+        '===================================================================='
       )
     );
-    console.log(title.blueBright("\n🏆🎉 Auction Results 🎉🏆\n"));
+    console.log(title.blueBright('\n🏆🎉 Auction Results 🎉🏆\n'));
 
     console.log(
-      `- ${highlight("Auction Winner:")} ${winnerStyle(
-        winner !== null ? winner : "NO WINNER"
+      `- ${highlight('Auction Winner:')} ${winnerStyle(
+        winner !== null ? winner : 'NO WINNER'
       )} ${trophyEmoji}`
     );
     console.log(
-      `- ${highlight("Winning Price:")} ${priceStyle(
+      `- ${highlight('Winning Price:')} ${priceStyle(
         `€${winningPrice} ${moneyBagEmoji}`
       )}`
     );
@@ -43,7 +43,7 @@ export class DisplayAuctionPresenter implements IAuctionPresenter {
 
     console.log(
       chalk.green(
-        "===================================================================="
+        '===================================================================='
       )
     );
   }
