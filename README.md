@@ -1,43 +1,123 @@
-# Auction System
 
-## Overview
+# Auction project
 
 This project implements my proposition for an auction system using TypeScript, following Clean Code principles, Clean Architecture, and SOLID principles. The system includes functionality for handling bids, determining winners, and displaying results.
 
+
 ## Table of Contents
 
-- [Auction System](#auction-system)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Installation](#installation)
 
+
 ## Features
 
-- **Auction System**: Handles multiple bidders and their bids.
-- **Bid Validation**: Ensures bids meet or exceed the reserve price.
-- **Winner Determination**: Identifies the highest bidder and sets the winning price based on the second-highest bid.
-- **Presentation Layer**: Provides a clean and informative output for auction results.
+- Handles multiple bidders and their bids.
+- Ensures bids meet or exceed the reserve price
+- on the second-highest bid
+- Provides a clean and informative output for auction results
+
 
 ## Installation
 
-To set up the project locally, follow these steps:
+Install dépendencies with npm
 
-1. **Clone the Repository**
+```bash
+git clone https://github.com/Doha26/auction-project.git
+cd auction-project
+npm install
+```
+    
+## Run Locally
 
-   ```bash
-   git clone https://github.com/Doha26/auction-project.git
-1. **Navigate to the project**
-   ```bash
-   npm install
+Clone the project
 
-1. **Usage**
-To run the application or execute tests, use the following commands:
+```bash
+  git clone https://github.com/Doha26/auction-project.git
+```
 
-Run the Application
+Go to the project directory
 
-This project does not have a direct entry point for running an application but contains business logic and a presenter for auction results.
+```bash
+  cd auction-project
+```
 
-Run Tests
+Install dependencies
 
-To execute the tests and ensure everything works as expected, run:
+```bash
+  npm install
+```
+
+
+## Usage
+
+```bash
+npm run start-dev // Run in dev mode
+```
+
+```bash
+npm run start // to run in prod mode
+```
+
+
+## Demo
+
+![App Demo](screenshots/app.png)
+
+## Tests
+
+![Tests demo](screenshots/tests.png)
+
+
+## Project structure
+
+/auction-system
+│
+├── /src
+│   ├── /application
+│   │   ├── AuctionService.ts
+│   │   ├── index.ts
+│   │
+│   ├── /domain
+│   │   ├── Auction.ts
+│   │   ├── Bid.ts
+│   │   ├── index.ts
+│   │
+│   ├── /presenters
+│   │   ├── DisplayAuctionPresenter.ts
+│   │   ├── index.ts
+│   │
+│   ├── /interfaces
+│   │    ├── IAuctionPresenter.ts
+│   │    └── IShared.ts
+│   │    └── index.ts
+│   │
+│   ├── /utils
+│   │   ├── index.ts
+│   │
+│   ├── /screenshots
+│   │   ├── app.png
+│   │   ├── tests.png
+│   │
+│   ├── index.ts
+│
+├── /tests
+│   ├── Auction.test.ts
+│
+├── .eslintrc.json
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── package.json
+├── tsconfig.json
+├── README.md
+└── jest.config.js
+
+
+
+## Documentation
+
+This readme serve as the actual documentation, but appropriated tool can be used in place. 
+
